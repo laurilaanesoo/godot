@@ -1,3 +1,7 @@
+#Harjutus 4.1
+#Lauri Laanesoo
+#12.04.2022
+
 extends Node
 
 func _ready():
@@ -6,9 +10,12 @@ func _ready():
 
 	nimed.sort()
 	var size = nimed.size()
-	print("Massiivi suurus: ",size)
-	nimed.append("Lauri")
+	print("Mängjate arv: ",size)
+	print("Esimene nimi: ", nimed[0])
 	nimed.erase("Reyes")
+	nimed.append("Lauri")
+	
 
 	for i in nimed:
 		 print(i)
+	
