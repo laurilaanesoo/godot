@@ -11,4 +11,4 @@ func _ready():
 	nimed.erase("Reyes")
 
 	for i in nimed:
-		 print(nimed[i])
+		 print(i)
