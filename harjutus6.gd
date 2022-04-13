@@ -12,20 +12,16 @@ func _ready():
 
 func _process(_delta):
 	if Input.is_action_just_pressed("tulista"):
-		print("piu piu")
+		if pihtas == true:
+			print("piu piu")
+			rng.randomize()
+			var suv = rng.randi_range(8,12)
+			vaenlane -= suv
+			print("Vaenlase elud: ", vaenlane)
+		else:
+			print('lasid mööda')
+
 		
-	if Input.is_action_just_pressed("lae"):
-		print("laen")
-		salv = 5
-	
-	
-	if pihtas == True:
-		rng.randomize()
-	vaenlane - rng.randf_range(8,12)
-	else:
-		print("Lasid mööda")
-		vaenlane - rand
-	
-	
-	for i in salv:
-		salv - 1
+		if Input.is_action_just_pressed("lae"):
+			print("laen")
+			salv = 5
