@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://harjutus3.gd" type="Script" id=1]
 [ext_resource path="res://harjutus2.gd" type="Script" id=2]
@@ -8,12 +8,16 @@
 [ext_resource path="res://harjutus5.gd" type="Script" id=6]
 [ext_resource path="res://harjutus6.gd" type="Script" id=7]
 [ext_resource path="res://bg2.webp" type="Texture" id=8]
+[ext_resource path="res://harjutus7.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=1]
+size = 20
 
 [sub_resource type="DynamicFont" id=2]
+size = 20
 
 [sub_resource type="DynamicFont" id=3]
+size = 20
 
 [node name="Node" type="Node"]
 script = ExtResource( 2 )
@@ -36,7 +40,10 @@ script = ExtResource( 6 )
 [node name="Node2" type="Node" parent="."]
 script = ExtResource( 7 )
 
-[node name="TextureRect" type="TextureRect" parent="."]
+[node name="Node3" type="Node" parent="."]
+script = ExtResource( 9 )
+
+[node name="taustapilt" type="TextureRect" parent="Node3"]
 anchor_left = 0.02
 anchor_right = 0.02
 margin_left = -206.48
@@ -46,11 +53,11 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="bg2" type="Sprite" parent="TextureRect"]
+[node name="bg2" type="Sprite" parent="Node3/taustapilt"]
 position = Vector2( 699.843, 303.487 )
 texture = ExtResource( 8 )
 
-[node name="skoor" type="RichTextLabel" parent="TextureRect"]
+[node name="skoor" type="RichTextLabel" parent="Node3/taustapilt"]
 margin_left = 1025.2
 margin_top = 25.4003
 margin_right = 1197.2
@@ -61,21 +68,24 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ammo" type="RichTextLabel" parent="TextureRect"]
-margin_left = 192.929
-margin_top = 544.021
-margin_right = 316.929
-margin_bottom = 598.021
+[node name="ammo" type="RichTextLabel" parent="Node3/taustapilt"]
+margin_left = 193.0
+margin_top = 519.0
+margin_right = 367.0
+margin_bottom = 598.0
 custom_fonts/normal_font = SubResource( 2 )
 text = "Ammo"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="elud" type="RichTextLabel" parent="TextureRect"]
+[node name="elud" type="RichTextLabel" parent="Node3/taustapilt"]
 margin_left = 1081.0
 margin_top = 540.0
 margin_right = 1200.0
 margin_bottom = 596.0
 custom_fonts/normal_font = SubResource( 3 )
 text = "Life: "
+__meta__ = {
+"_edit_use_anchors_": false
+}
