@@ -20,7 +20,8 @@ func _process(_delta):
 			var suv = rng.randi_range(8,12)
 			vaenlane -= suv
 			print("Vaenlase elud: ", vaenlane)
-			skoor += 5
+			skoor += 1
+			print("Skoor: ", skoor)
 			salv -= 1
 			lask += 1
 			
@@ -32,7 +33,7 @@ func _process(_delta):
 		if vaenlane <= 0:
 			print("------------Mäng läbi------------------")	
 			get_tree().quit()
-			print("Skoor: ", skoor)
+			
 			print("Laskude arv: ", lask)
 			print("Effektiivsus: ", eff)
 			

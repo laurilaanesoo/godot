@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://harjutus3.gd" type="Script" id=1]
 [ext_resource path="res://harjutus2.gd" type="Script" id=2]
@@ -9,15 +9,25 @@
 [ext_resource path="res://harjutus6.gd" type="Script" id=7]
 [ext_resource path="res://bg2.webp" type="Texture" id=8]
 [ext_resource path="res://harjutus7.gd" type="Script" id=9]
+[ext_resource path="res://VT323-Regular.ttf" type="DynamicFontData" id=10]
 
-[sub_resource type="DynamicFont" id=1]
-size = 20
+[sub_resource type="DynamicFont" id=5]
+size = 60
+font_data = ExtResource( 10 )
 
-[sub_resource type="DynamicFont" id=2]
-size = 20
+[sub_resource type="DynamicFontData" id=8]
+font_path = "res://VT323-Regular.ttf"
 
-[sub_resource type="DynamicFont" id=3]
-size = 20
+[sub_resource type="DynamicFont" id=9]
+size = 60
+font_data = SubResource( 8 )
+
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://VT323-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 60
+font_data = SubResource( 6 )
 
 [node name="Node" type="Node"]
 script = ExtResource( 2 )
@@ -58,34 +68,38 @@ position = Vector2( 699.843, 303.487 )
 texture = ExtResource( 8 )
 
 [node name="skoor" type="RichTextLabel" parent="Node3/taustapilt"]
-margin_left = 1025.2
-margin_top = 25.4003
-margin_right = 1197.2
-margin_bottom = 115.4
-custom_fonts/normal_font = SubResource( 1 )
-text = "Score :"
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
-[node name="ammo" type="RichTextLabel" parent="Node3/taustapilt"]
-margin_left = 193.0
-margin_top = 519.0
-margin_right = 367.0
-margin_bottom = 598.0
-custom_fonts/normal_font = SubResource( 2 )
-text = "Ammo"
+anchor_left = 2.916
+anchor_top = 0.72
+anchor_right = 4.296
+anchor_bottom = 1.269
+margin_left = 252.057
+margin_top = -174.836
+margin_right = 241.177
+margin_bottom = -233.733
+custom_fonts/normal_font = SubResource( 5 )
+text = "Skoor:"
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="elud" type="RichTextLabel" parent="Node3/taustapilt"]
-margin_left = 1081.0
-margin_top = 540.0
-margin_right = 1200.0
-margin_bottom = 596.0
-custom_fonts/normal_font = SubResource( 3 )
-text = "Life: "
+margin_left = 964.0
+margin_top = 538.0
+margin_right = 1203.0
+margin_bottom = 585.0
+custom_fonts/normal_font = SubResource( 9 )
+text = "Elud:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ammo" type="RichTextLabel" parent="Node3/taustapilt"]
+margin_left = 198.0
+margin_top = 524.0
+margin_right = 341.0
+margin_bottom = 593.0
+custom_fonts/normal_font = SubResource( 7 )
+text = "Ammo: "
 __meta__ = {
 "_edit_use_anchors_": false
 }
