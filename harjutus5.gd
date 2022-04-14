@@ -1,3 +1,6 @@
+extends Node
+
+
 func too():
 	var tunnid = 40
 	var tunnitasu = 5

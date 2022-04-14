@@ -41,5 +41,9 @@ func _process(_delta):
 		print("laen")
 		salv = 5
 		
+		$taustapilt/ammo.text = "Ammo: %s" % salv
+		$taustapilt/elud.text = "Life: %s" % vaenlane
+		$taustapilt/skoor.text = "Skoor: %s" % skoor
+		
 	
 	

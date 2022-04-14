@@ -12,4 +12,4 @@ func _ready():
 		print("ei saa osta")
 	var rahapuudu = raha - kaup
 	print("Sul on puudu" , -rahapuudu , "eurot")
-	abs(rahapuudu)
+	

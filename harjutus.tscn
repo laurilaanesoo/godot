@@ -1,8 +1,19 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://harjutus3.gd" type="Script" id=1]
 [ext_resource path="res://harjutus2.gd" type="Script" id=2]
 [ext_resource path="res://Node.gd" type="Script" id=3]
+[ext_resource path="res://harjutus4.gd" type="Script" id=4]
+[ext_resource path="res://harjutus4.2.gd" type="Script" id=5]
+[ext_resource path="res://harjutus5.gd" type="Script" id=6]
+[ext_resource path="res://harjutus6.gd" type="Script" id=7]
+[ext_resource path="res://bg2.webp" type="Texture" id=8]
+
+[sub_resource type="DynamicFont" id=1]
+
+[sub_resource type="DynamicFont" id=2]
+
+[sub_resource type="DynamicFont" id=3]
 
 [node name="Node" type="Node"]
 script = ExtResource( 2 )
@@ -14,3 +25,57 @@ script = ExtResource( 1 )
 script = ExtResource( 3 )
 
 [node name="Node" type="Node" parent="Node/Node"]
+script = ExtResource( 4 )
+
+[node name="Node" type="Node" parent="Node/Node/Node"]
+script = ExtResource( 5 )
+
+[node name="Node" type="Node" parent="Node/Node/Node/Node"]
+script = ExtResource( 6 )
+
+[node name="Node2" type="Node" parent="."]
+script = ExtResource( 7 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchor_left = 0.02
+anchor_right = 0.02
+margin_left = -206.48
+margin_right = 19.52
+margin_bottom = 253.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="bg2" type="Sprite" parent="TextureRect"]
+position = Vector2( 699.843, 303.487 )
+texture = ExtResource( 8 )
+
+[node name="skoor" type="RichTextLabel" parent="TextureRect"]
+margin_left = 1025.2
+margin_top = 25.4003
+margin_right = 1197.2
+margin_bottom = 115.4
+custom_fonts/normal_font = SubResource( 1 )
+text = "Score :"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ammo" type="RichTextLabel" parent="TextureRect"]
+margin_left = 192.929
+margin_top = 544.021
+margin_right = 316.929
+margin_bottom = 598.021
+custom_fonts/normal_font = SubResource( 2 )
+text = "Ammo"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="elud" type="RichTextLabel" parent="TextureRect"]
+margin_left = 1081.0
+margin_top = 540.0
+margin_right = 1200.0
+margin_bottom = 596.0
+custom_fonts/normal_font = SubResource( 3 )
+text = "Life: "

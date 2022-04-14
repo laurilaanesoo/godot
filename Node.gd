@@ -4,7 +4,7 @@
 extends Node
 
 
-var nimi = "lol" 
+var nimi = "aaa" 
 var elud = 0
 var rng = RandomNumberGenerator.new()
 
