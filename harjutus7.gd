@@ -1,3 +1,8 @@
+#Harjutus 7
+#Lauri Laanesoo
+#18.04.2022
+
+
 extends Node
 
 var vaenlane = 100
@@ -9,9 +14,11 @@ var eff = 100
 var rng = RandomNumberGenerator.new()
 
 func _process(_delta):
-	$taustaplt/ammo.text = "Ammo: %s" % salv
+	$taustapilt/ammo.text = "Ammo: %s" % salv
 	$taustapilt/elud.text = "Life: %s" % vaenlane
-	$taustapilt/test.text = "Skoor: %s" % skoor
+	$taustapilt/skoor.text = "Skoor: %s" % skoor
+	$taustapilt/piu.text = "piu piu"
+	
 	if Input.is_action_just_pressed("tulista"):
 		if pihtas == true:
 			
@@ -26,8 +33,8 @@ func _process(_delta):
 		if pihtas == false:
 			eff = 100 - 10
 		if vaenlane <= 0:
-			get_tree().quit()
+			get_tree().paused = true
+			$taustapilt/game.text = "GAME OVER"
 
 	if Input.is_action_just_pressed("lae"):
 		salv = 5
-

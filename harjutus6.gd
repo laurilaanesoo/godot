@@ -1,3 +1,7 @@
+#Harjutus 6
+#Lauri Laanesoo
+#18.04.2022
+
 extends Node
 
 var vaenlane = 100
@@ -13,6 +17,7 @@ func _ready():
 	print("-------------Lauri----------------")
 
 func _process(_delta):
+	$taustapilt/ammo.text = "Ammo: "+  str(salv)
 	if Input.is_action_just_pressed("tulista"):
 		if pihtas == true:
 			print("piu piu")
@@ -36,6 +41,7 @@ func _process(_delta):
 			
 			print("Laskude arv: ", lask)
 			print("Effektiivsus: ", eff)
+			print("Skoor: ", skoor)
 			
 	
 		

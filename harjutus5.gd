@@ -1,3 +1,7 @@
+#Harjutus5
+#Lauri Laanesoo
+#18.04.2022
+
 extends Node
 
 
