@@ -1,22 +1,22 @@
 extends Node
- 
-var summa = 0
- 
+var skoor = 0
+var skoor2 = 0
+
+
 func _process(delta):
-	$vastus.text = str(summa)
- 
-func _on_pluss_1_pressed():
-	summa+=1
-	$pluss_1.text = "valisid"
-	$pluss_1.visible = not $pluss_1.visible
- 
-func _on_pluss_2_pressed():
-	summa+=2
-	$pluss_2.visible = not $pluss_2.visible
- 
-func _on_pluss_3_pressed():
-	summa+=3
-	$pluss_3.visible = not $pluss_3.visible
- 
+	$taust/skoor1.text = "Skoor: %s" % skoor
+	$taust/skoor2.text = "Skoor: %s" % skoor2
 func _on_restart_pressed():
 	get_tree().reload_current_scene()
+
+
+func _on_Button_pressed():
+	$taust/valik1.text = "Kivi"
+	
+	
+func _on_Button2_pressed():
+	$taust/valik1.text = "Paber"
+
+
+func _on_Button3_pressed():
+	$taust/valik1.text = "Käärid"

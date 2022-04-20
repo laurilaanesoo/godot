@@ -2,7 +2,6 @@
 #Lauri Laanesoo
 #18.04.2022
 
-
 extends Node
 
 var vaenlane = 100

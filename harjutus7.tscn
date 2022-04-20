@@ -1,0 +1,126 @@
+[gd_scene load_steps=15 format=2]
+
+[ext_resource path="res://VT323-Regular.ttf" type="DynamicFontData" id=1]
+[ext_resource path="res://harjutus7.gd" type="Script" id=2]
+[ext_resource path="res://bg2.webp" type="Texture" id=3]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://VT323-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 60
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 60
+font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=4]
+font_path = "res://VT323-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=5]
+size = 60
+font_data = SubResource( 4 )
+
+[sub_resource type="DynamicFontData" id=6]
+font_path = "res://VT323-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=7]
+size = 60
+outline_color = Color( 1, 0, 0, 1 )
+font_data = SubResource( 6 )
+
+[sub_resource type="DynamicFontData" id=8]
+font_path = "res://VT323-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=9]
+size = 60
+font_data = SubResource( 8 )
+
+[sub_resource type="DynamicFontData" id=10]
+font_path = "res://VT323-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=11]
+size = 60
+font_data = SubResource( 10 )
+
+[node name="Node" type="Node"]
+
+[node name="Node3" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="taustapilt" type="TextureRect" parent="Node3"]
+anchor_left = 0.02
+anchor_right = 0.02
+margin_left = -18.4506
+margin_top = 3.7509
+margin_right = 1005.55
+margin_bottom = 603.751
+texture = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ammo" type="RichTextLabel" parent="Node3/taustapilt"]
+margin_left = 9.00452
+margin_top = 537.0
+margin_right = 234.005
+margin_bottom = 606.0
+custom_fonts/normal_font = SubResource( 2 )
+text = "Ammo:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skoor" type="RichTextLabel" parent="Node3/taustapilt"]
+anchor_left = 2.916
+anchor_top = 0.72
+anchor_right = 4.296
+anchor_bottom = 1.269
+margin_left = -2228.66
+margin_top = -431.0
+margin_right = -3376.78
+margin_bottom = -694.4
+custom_fonts/normal_font = SubResource( 3 )
+text = "Skoor:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="elud" type="RichTextLabel" parent="Node3/taustapilt"]
+margin_left = 804.0
+margin_top = 533.0
+margin_right = 1037.0
+margin_bottom = 594.0
+custom_fonts/normal_font = SubResource( 5 )
+text = "Elud:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="game" type="RichTextLabel" parent="Node3/taustapilt"]
+margin_left = 251.0
+margin_top = 129.0
+margin_right = 825.0
+margin_bottom = 415.0
+custom_fonts/normal_font = SubResource( 7 )
+custom_colors/default_color = Color( 0.988235, 0.0470588, 0.0470588, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="piu" type="RichTextLabel" parent="Node3/taustapilt"]
+margin_right = 284.0
+margin_bottom = 67.0
+custom_fonts/normal_font = SubResource( 9 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="laen" type="RichTextLabel" parent="Node3/taustapilt"]
+margin_right = 233.0
+margin_bottom = 98.0
+custom_fonts/normal_font = SubResource( 11 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
