@@ -1,4 +1,5 @@
 extends Node
+
 var skoor1 = 0
 var skoor2 = 0
 var rng = RandomNumberGenerator.new()
@@ -12,8 +13,11 @@ func _process(delta):
 	rng.randomize()
 	suv = rng.randi_range(1,3)
 	if skoor1 == 10:
+		$tulemus.text == "VÕIT"
 		get_tree().reload_current_scene()
+		
 	elif skoor2 == 10:
+		$tulemus.text =="KAOTUS"
 		get_tree().reload_current_scene()
 	
 	
@@ -73,4 +77,3 @@ func lol():
 	elif $taust/valik2.text == "Käärid" and $taust/valik1.text == "Paber":
 		tulemus = "KAOTUS"
 		skoor2 += 1
-		
