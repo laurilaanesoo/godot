@@ -1,0 +1,197 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://harjutus8.gd" type="Script" id=1]
+[ext_resource path="res://taust.webp" type="Texture" id=2]
+
+[sub_resource type="DynamicFontData" id=1]
+font_path = "res://VT323-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=2]
+size = 32
+font_data = SubResource( 1 )
+
+[sub_resource type="DynamicFontData" id=3]
+font_path = "res://VT323-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=4]
+size = 32
+font_data = SubResource( 3 )
+
+[sub_resource type="DynamicFontData" id=5]
+font_path = "res://VT323-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=6]
+size = 32
+font_data = SubResource( 5 )
+
+[sub_resource type="DynamicFontData" id=7]
+font_path = "res://VT323-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=8]
+size = 32
+font_data = SubResource( 7 )
+
+[sub_resource type="DynamicFontData" id=9]
+font_path = "res://VT323-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=10]
+size = 32
+font_data = SubResource( 9 )
+
+[sub_resource type="DynamicFontData" id=11]
+font_path = "res://VT323-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=12]
+size = 32
+font_data = SubResource( 11 )
+
+[sub_resource type="DynamicFontData" id=13]
+font_path = "res://VT323-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=14]
+size = 32
+font_data = SubResource( 13 )
+
+[sub_resource type="DynamicFontData" id=15]
+font_path = "res://VT323-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=16]
+size = 32
+font_data = SubResource( 15 )
+
+[sub_resource type="DynamicFontData" id=17]
+font_path = "res://VT323-Regular.ttf"
+
+[sub_resource type="DynamicFont" id=18]
+size = 32
+font_data = SubResource( 17 )
+
+[node name="Node" type="Node"]
+script = ExtResource( 1 )
+
+[node name="taust" type="TextureRect" parent="."]
+margin_right = 1025.0
+margin_bottom = 603.0
+texture = ExtResource( 2 )
+stretch_mode = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skoor1" type="RichTextLabel" parent="taust"]
+margin_left = 52.4814
+margin_top = 53.9831
+margin_right = 312.481
+margin_bottom = 113.983
+custom_fonts/normal_font = SubResource( 2 )
+text = "Skoor:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="skoor2" type="RichTextLabel" parent="taust"]
+margin_left = 714.0
+margin_top = 50.0
+margin_right = 934.0
+margin_bottom = 116.0
+custom_fonts/normal_font = SubResource( 4 )
+text = "Skoor:"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="valik1" type="RichTextLabel" parent="taust"]
+margin_left = 103.314
+margin_top = 246.945
+margin_right = 311.314
+margin_bottom = 333.945
+custom_fonts/normal_font = SubResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="valik2" type="RichTextLabel" parent="taust"]
+margin_left = 703.0
+margin_top = 257.0
+margin_right = 914.0
+margin_bottom = 361.0
+custom_fonts/normal_font = SubResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="punktid2" type="RichTextLabel" parent="."]
+margin_left = 710.595
+margin_top = 73.0754
+margin_right = 900.595
+margin_bottom = 143.075
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="punktid1" type="RichTextLabel" parent="."]
+margin_left = 74.3354
+margin_top = 41.5774
+margin_right = 287.335
+margin_bottom = 121.577
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button4" type="Button" parent="."]
+margin_left = 448.532
+margin_top = 52.9167
+margin_right = 600.532
+margin_bottom = 114.917
+custom_fonts/font = SubResource( 10 )
+text = "UUS MÄNG"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button3" type="Button" parent="."]
+margin_left = 304.0
+margin_top = 470.0
+margin_right = 429.0
+margin_bottom = 543.0
+custom_fonts/font = SubResource( 12 )
+text = "KÄÄRID"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="."]
+margin_left = 30.0
+margin_top = 470.0
+margin_right = 145.0
+margin_bottom = 543.0
+custom_fonts/font = SubResource( 14 )
+text = "KIVI"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button2" type="Button" parent="."]
+margin_left = 168.0
+margin_top = 470.0
+margin_right = 287.0
+margin_bottom = 542.0
+custom_fonts/font = SubResource( 16 )
+text = "PABER"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="tulemus" type="RichTextLabel" parent="."]
+margin_left = 427.113
+margin_top = 144.891
+margin_right = 631.113
+margin_bottom = 217.891
+custom_fonts/normal_font = SubResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+[connection signal="pressed" from="Button4" to="." method="_on_restart_pressed"]
+[connection signal="pressed" from="Button3" to="." method="_on_Button3_pressed"]
+[connection signal="pressed" from="Button" to="." method="_on_Button_pressed"]
+[connection signal="pressed" from="Button2" to="." method="_on_Button2_pressed"]
