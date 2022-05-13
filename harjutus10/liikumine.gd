@@ -6,14 +6,16 @@ const ACCEL = 50
 const UP = Vector2(0,-1)
 const GRAV = 100
 const JUMPHIGH = -1500
-
+var elud = 3
 var motion = Vector2()
+
 
 func _physics_process(_delta):
 	motion.y += GRAV
 	run()
 	jump()
 	motion = move_and_slide(motion, UP)
+
 	
 #funktsioonid
 func run():
@@ -29,10 +31,12 @@ func run():
 		$AnimatedSprite.play("run")
 	else:
 		$AnimatedSprite.play("idle")
-		
+		motion.x = lerp(motion.x, 0, 0.2)
 func jump():
 	if is_on_floor():
 		if Input.is_action_pressed("ui_up"):
 			motion.y = JUMPHIGH
 	else:
 		$AnimatedSprite.play("jump")
+
+

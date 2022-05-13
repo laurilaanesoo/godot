@@ -35,36 +35,36 @@
 [ext_resource path="res://raccoon/jump/jump0007.png" type="Texture" id=34]
 [ext_resource path="res://raccoon/jump/jump0019.png" type="Texture" id=35]
 
-[sub_resource type="CapsuleShape2D" id=1]
-radius = 21.5182
-height = 28.4963
-
-[sub_resource type="SpriteFrames" id=2]
+[sub_resource type="SpriteFrames" id=1]
 animations = [ {
 "frames": [ ExtResource( 2 ), ExtResource( 24 ), ExtResource( 25 ), ExtResource( 23 ), ExtResource( 7 ), ExtResource( 5 ), ExtResource( 13 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 15 ) ],
 "loop": true,
 "name": "idle",
 "speed": 20.0
 }, {
-"frames": [ ExtResource( 6 ), ExtResource( 26 ), ExtResource( 14 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 27 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 16 ) ],
-"loop": true,
-"name": "run",
-"speed": 20.0
-}, {
 "frames": [ ExtResource( 18 ), ExtResource( 4 ), ExtResource( 3 ), ExtResource( 34 ), ExtResource( 28 ), ExtResource( 29 ), ExtResource( 33 ), ExtResource( 30 ), ExtResource( 32 ), ExtResource( 35 ), ExtResource( 31 ) ],
 "loop": true,
 "name": "jump",
 "speed": 20.0
+}, {
+"frames": [ ExtResource( 6 ), ExtResource( 26 ), ExtResource( 14 ), ExtResource( 17 ), ExtResource( 12 ), ExtResource( 8 ), ExtResource( 27 ), ExtResource( 19 ), ExtResource( 20 ), ExtResource( 21 ), ExtResource( 22 ), ExtResource( 16 ) ],
+"loop": true,
+"name": "run",
+"speed": 20.0
 } ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 30.7267
+height = 37.8818
 
 [node name="KinematicBody2D" type="KinematicBody2D"]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2( 292.17, 317.641 )
-shape = SubResource( 1 )
-
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-position = Vector2( 264.217, 293.748 )
+position = Vector2( 263.158, 295.867 )
 scale = Vector2( 0.323205, 0.323642 )
-frames = SubResource( 2 )
+frames = SubResource( 1 )
 animation = "run"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 296.408, 316.582 )
+shape = SubResource( 2 )
